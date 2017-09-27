@@ -28,7 +28,7 @@
     <link rel="icon" href="<?php echo site_url('img/dur.png');?>" type="image/x-icon" />
     <link rel="shortcut icon" href="<?php echo site_url('img/dur.png');?>" type="image/x-icon" />
     <link rel="canonical" href=""/>
-
+    <script>var base_url = '<?php echo site_url(); ?>';</script>
 
     <title>Importadora Durban</title>
 

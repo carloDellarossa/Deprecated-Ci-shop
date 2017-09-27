@@ -5,7 +5,8 @@ function updateCarro(i){
 	var rowid = $('#rowid' + i).val();
 
 	$.ajax({
-	url: 'Carro/mod/',
+	url: base_url + 'index.php/Carro/mod/',
+
 	type: 'POST',
 	dataType: 'text',
 	data: {
@@ -13,7 +14,8 @@ function updateCarro(i){
 		rowid: rowid
 	}
 	}).done(function (data) {
-		$.get("/Durban2/index.php/Carro/mostrarCarro", function (cart) {
+		$.get(base_url + "index.php/Carro/mostrarCarro", function (cart) {
+
 			$("#contenidoCarro").html(cart);
 			//alert('carro atualisado');
 		});
@@ -39,7 +41,8 @@ function updatePC(i) {
 	var price = '';
 	var tt = 0;
 	$.ajax({
-			url: 'Carro/getRPpP/',
+			url: base_url + 'index.php/Carro/getRPpP/',
+
 			type: 'POST',
 			dataType: 'text',
 			data: {
@@ -76,7 +79,8 @@ function updatePD() {
 	var cod = $('#codigo').text();
 	var price = '';
 	$.ajax({
-			url: 'Carro/getRPpP/',
+			url: base_url + 'index.php/Carro/getRPpP/',
+
 			type: 'POST',
 			dataType: 'text',
 			data: {
@@ -103,7 +107,10 @@ function updatePD() {
 
 
 $(document).ready(function () {
-    var link = "/Durban2/";
+/* 	var link = "/Durban2/";
+	var site_url = '<?php echo site_url(); ?>'; */
+	//alert(window.location.host);
+
     updatePD();
 
     //Actualisar precio por cantidad en vista Detalle
@@ -127,7 +134,8 @@ $(document).ready(function () {
         var price = $(this).find('input[name=price]').val();
         var qty = $(this).find('input[name=qty]').val();
 
-        $.post(link + "index.php/Carro/agregar", {
+        $.post(base_url + "index.php/Carro/agregar", {
+
             id: id,
             qty: qty,
             price: price,
@@ -137,7 +145,8 @@ $(document).ready(function () {
 
             function (data) {
 
-                $.get(link + "index.php/Carro/mostrarCarro", function (cart) {
+                $.get(base_url + "index.php/Carro/mostrarCarro", function (cart) {
+
 
                     $("#contenidoCarro").html(cart);
                     alert("Producto agregado al carro");
