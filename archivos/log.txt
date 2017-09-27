@@ -1,0 +1,475 @@
+192.168.60.18ArrayArray
+(
+    [ip] => 192.168.60.18
+    [fecha] => Array
+        (
+            [seconds] => 53
+            [minutes] => 30
+            [hours] => 11
+            [mday] => 12
+            [wday] => 2
+            [mon] => 9
+            [year] => 2017
+            [yday] => 254
+            [weekday] => Tuesday
+            [month] => September
+            [0] => 1505226653
+        )
+
+)
+Array
+(
+    [ip] => 192.168.60.19
+    [fecha] => Array
+        (
+            [seconds] => 40
+            [minutes] => 41
+            [hours] => 11
+            [mday] => 12
+            [wday] => 2
+            [mon] => 9
+            [year] => 2017
+            [yday] => 254
+            [weekday] => Tuesday
+            [month] => September
+            [0] => 1505227300
+        )
+
+)
+Array
+(
+    [ip] => 192.168.60.10
+    [fecha] => Array
+        (
+            [seconds] => 7
+            [minutes] => 46
+            [hours] => 11
+            [mday] => 12
+            [wday] => 2
+            [mon] => 9
+            [year] => 2017
+            [yday] => 254
+            [weekday] => Tuesday
+            [month] => September
+            [0] => 1505227567
+        )
+
+)
+Array
+(
+    [ip] => 192.168.60.10
+    [fecha] => Array
+        (
+            [seconds] => 26
+            [minutes] => 56
+            [hours] => 11
+            [mday] => 12
+            [wday] => 2
+            [mon] => 9
+            [year] => 2017
+            [yday] => 254
+            [weekday] => Tuesday
+            [month] => September
+            [0] => 1505228186
+        )
+
+)
+Array
+(
+    [ip] => 192.168.60.10
+    [fecha] => Array
+        (
+            [seconds] => 14
+            [minutes] => 58
+            [hours] => 14
+            [mday] => 12
+            [wday] => 2
+            [mon] => 9
+            [year] => 2017
+            [yday] => 254
+            [weekday] => Tuesday
+            [month] => September
+            [0] => 1505239094
+        )
+
+)
+Array
+(
+    [ip] => 192.168.60.10
+    [fecha] => Array
+        (
+            [seconds] => 55
+            [minutes] => 0
+            [hours] => 15
+            [mday] => 12
+            [wday] => 2
+            [mon] => 9
+            [year] => 2017
+            [yday] => 254
+            [weekday] => Tuesday
+            [month] => September
+            [0] => 1505239255
+        )
+
+)
+Array
+(
+    [ip] => 192.168.60.10
+    [fecha] => Array
+        (
+            [seconds] => 30
+            [minutes] => 2
+            [hours] => 15
+            [mday] => 12
+            [wday] => 2
+            [mon] => 9
+            [year] => 2017
+            [yday] => 254
+            [weekday] => Tuesday
+            [month] => September
+            [0] => 1505239350
+        )
+
+)
+Array
+(
+    [ip] => 192.168.60.10
+    [fecha] => Array
+        (
+            [seconds] => 5
+            [minutes] => 3
+            [hours] => 15
+            [mday] => 12
+            [wday] => 2
+            [mon] => 9
+            [year] => 2017
+            [yday] => 254
+            [weekday] => Tuesday
+            [month] => September
+            [0] => 1505239385
+        )
+
+)
+Array
+(
+    [ip] => 192.168.60.10
+    [fecha] => Array
+        (
+            [seconds] => 41
+            [minutes] => 6
+            [hours] => 15
+            [mday] => 12
+            [wday] => 2
+            [mon] => 9
+            [year] => 2017
+            [yday] => 254
+            [weekday] => Tuesday
+            [month] => September
+            [0] => 1505239601
+        )
+
+)
+Array
+(
+    [ip] => 192.168.60.10
+    [fecha] => Array
+        (
+            [seconds] => 57
+            [minutes] => 7
+            [hours] => 15
+            [mday] => 12
+            [wday] => 2
+            [mon] => 9
+            [year] => 2017
+            [yday] => 254
+            [weekday] => Tuesday
+            [month] => September
+            [0] => 1505239677
+        )
+
+)
+Array
+(
+    [ip] => 
+    [fecha] => Array
+        (
+            [seconds] => 17
+            [minutes] => 48
+            [hours] => 9
+            [mday] => 13
+            [wday] => 3
+            [mon] => 9
+            [year] => 2017
+            [yday] => 255
+            [weekday] => Wednesday
+            [month] => September
+            [0] => 1505306897
+        )
+
+)
+Array
+(
+    [ip] => 192.168.60.18
+    [fecha] => Array
+        (
+            [seconds] => 37
+            [minutes] => 48
+            [hours] => 9
+            [mday] => 13
+            [wday] => 3
+            [mon] => 9
+            [year] => 2017
+            [yday] => 255
+            [weekday] => Wednesday
+            [month] => September
+            [0] => 1505306917
+        )
+
+)
+Array
+(
+    [ip] => 192.168.60.18
+    [fecha] => Array
+        (
+            [seconds] => 53
+            [minutes] => 48
+            [hours] => 9
+            [mday] => 13
+            [wday] => 3
+            [mon] => 9
+            [year] => 2017
+            [yday] => 255
+            [weekday] => Wednesday
+            [month] => September
+            [0] => 1505306933
+        )
+
+)
+Array
+(
+    [ip] => 192.168.60.18
+    [fecha] => Array
+        (
+            [seconds] => 8
+            [minutes] => 56
+            [hours] => 9
+            [mday] => 13
+            [wday] => 3
+            [mon] => 9
+            [year] => 2017
+            [yday] => 255
+            [weekday] => Wednesday
+            [month] => September
+            [0] => 1505307368
+        )
+
+)
+Array
+(
+    [ip] => 192.168.60.18
+    [fecha] => Array
+        (
+            [seconds] => 3
+            [minutes] => 3
+            [hours] => 10
+            [mday] => 13
+            [wday] => 3
+            [mon] => 9
+            [year] => 2017
+            [yday] => 255
+            [weekday] => Wednesday
+            [month] => September
+            [0] => 1505307783
+        )
+
+)
+Array
+(
+    [ip] => <h4>192.168.60.18</h4>
+    [fecha] => Array
+        (
+            [seconds] => 31
+            [minutes] => 4
+            [hours] => 10
+            [mday] => 13
+            [wday] => 3
+            [mon] => 9
+            [year] => 2017
+            [yday] => 255
+            [weekday] => Wednesday
+            [month] => September
+            [0] => 1505307871
+        )
+
+)
+Array
+(
+    [ip] => <h4>192.168.60.18</h4>
+    [fecha] => Array
+        (
+            [seconds] => 12
+            [minutes] => 5
+            [hours] => 10
+            [mday] => 13
+            [wday] => 3
+            [mon] => 9
+            [year] => 2017
+            [yday] => 255
+            [weekday] => Wednesday
+            [month] => September
+            [0] => 1505307912
+        )
+
+)
+Array
+(
+    [ip] => <h4>192.168.60.18</h4>
+    [fecha] => Array
+        (
+            [seconds] => 31
+            [minutes] => 5
+            [hours] => 10
+            [mday] => 13
+            [wday] => 3
+            [mon] => 9
+            [year] => 2017
+            [yday] => 255
+            [weekday] => Wednesday
+            [month] => September
+            [0] => 1505307931
+        )
+
+)
+Array
+(
+    [ip] => <h4>192.168.60.18</h4>
+    [fecha] => Array
+        (
+            [seconds] => 4
+            [minutes] => 6
+            [hours] => 10
+            [mday] => 13
+            [wday] => 3
+            [mon] => 9
+            [year] => 2017
+            [yday] => 255
+            [weekday] => Wednesday
+            [month] => September
+            [0] => 1505307964
+        )
+
+)
+Array
+(
+    [ip] => <h4>192.168.60.18</h4>
+    [fecha] => Array
+        (
+            [seconds] => 24
+            [minutes] => 6
+            [hours] => 10
+            [mday] => 13
+            [wday] => 3
+            [mon] => 9
+            [year] => 2017
+            [yday] => 255
+            [weekday] => Wednesday
+            [month] => September
+            [0] => 1505307984
+        )
+
+)
+Array
+(
+    [ip] => <h4>192.168.60.18</h4>
+    [fecha] => Array
+        (
+            [seconds] => 45
+            [minutes] => 6
+            [hours] => 10
+            [mday] => 13
+            [wday] => 3
+            [mon] => 9
+            [year] => 2017
+            [yday] => 255
+            [weekday] => Wednesday
+            [month] => September
+            [0] => 1505308005
+        )
+
+)
+Array
+(
+    [ip] => <h4>192.168.60.18</h4>
+    [fecha] => Array
+        (
+            [seconds] => 1
+            [minutes] => 7
+            [hours] => 10
+            [mday] => 13
+            [wday] => 3
+            [mon] => 9
+            [year] => 2017
+            [yday] => 255
+            [weekday] => Wednesday
+            [month] => September
+            [0] => 1505308021
+        )
+
+)
+Array
+(
+    [ip] => 192.168.60.18
+    [fecha] => Array
+        (
+            [seconds] => 31
+            [minutes] => 7
+            [hours] => 10
+            [mday] => 13
+            [wday] => 3
+            [mon] => 9
+            [year] => 2017
+            [yday] => 255
+            [weekday] => Wednesday
+            [month] => September
+            [0] => 1505308051
+        )
+
+)
+Array
+(
+    [ip] => 192.168.60.18
+    [fecha] => Array
+        (
+            [seconds] => 34
+            [minutes] => 7
+            [hours] => 10
+            [mday] => 13
+            [wday] => 3
+            [mon] => 9
+            [year] => 2017
+            [yday] => 255
+            [weekday] => Wednesday
+            [month] => September
+            [0] => 1505308054
+        )
+
+)
+Array
+(
+    [ip] => 192.168.60.18
+    [fecha] => Array
+        (
+            [seconds] => 11
+            [minutes] => 0
+            [hours] => 18
+            [mday] => 14
+            [wday] => 4
+            [mon] => 9
+            [year] => 2017
+            [yday] => 256
+            [weekday] => Thursday
+            [month] => September
+            [0] => 1505422811
+        )
+
+)
