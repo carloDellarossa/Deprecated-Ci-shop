@@ -1,4 +1,4 @@
-
+<section class="lista">
 <div class="conteiner">
 <div class="titulo col col-12">
       <h6>Productos en Oferta </h6>
@@ -61,3 +61,4 @@
     </ul>
   </div>
 </div>
+</section>

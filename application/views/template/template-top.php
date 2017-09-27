@@ -44,14 +44,14 @@
         <!-- menu top telefonos  -->
         <div class="info col col-12">
           <div class="row">
-            <div class="adm col">
+            <div class="adm col col-4">
             <h1>Administración: <span class="glyphicon glyphicon-earphone"> </span> 412 628 400 / <span class="glyphicon glyphicon-envelope"> </span> durban@durban.cl </h1>
             </div>
-            <div class="ventas col">
-            <h1>Ventas:
-            <span class="glyphicon glyphicon-earphone"> </span> +56 412 628 402 / <span class="glyphicon glyphicon-envelope"> </span> ventas2@durban.cl |
-            <span class="glyphicon glyphicon-earphone"> </span> +56 412 628 403 / <span class="glyphicon glyphicon-envelope"> </span> ventas3@durban.cl |
-            <span class="glyphicon glyphicon-earphone"> </span> +56 412 628 404 / <span class="glyphicon glyphicon-envelope"> </span> ventas4@durban.cl </h1>
+            <div class="ventas col-8">
+              <h1>Ventas:
+              <span class="glyphicon glyphicon-earphone"> </span> +56 412 628 402 / <span class="glyphicon glyphicon-envelope"> </span> ventas2@durban.cl |
+              <span class="glyphicon glyphicon-earphone"> </span> +56 412 628 403 / <span class="glyphicon glyphicon-envelope"> </span> ventas3@durban.cl |
+              <span class="glyphicon glyphicon-earphone"> </span> +56 412 628 404 / <span class="glyphicon glyphicon-envelope"> </span> ventas4@durban.cl </h1>
             </div>
           </div>
         </div>
@@ -71,85 +71,12 @@
 
               <div class="top2 text-center" id="containerNavbarCenter">
                 <ul class="navbar-nav" style="padding-top : 2%;">
-
                   <li class="nav-item active">
                     <a class="nav-link" href="<?php echo site_url('');?>">Inicio</a>
                   </li>
                   <li class="nav-item active">
                     <a class="nav-link" href="<?php echo site_url('index.php/Somos');?>">Quienes Somos</a>
                   </li>
-
-                  <!-- <li class="nav-item active">
-                    <a class="nav-link" href="<?php echo site_url('index.php/Trabajo');?>">Trabaje con nosotros</a>
-                  </li> -->
-                  <!-- <li class="nav-item active dropdown">
-                    <a class="nav-link dropdown-toggle" href="" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contacto</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdown05">
-                      <form id="ajax-login-form" action="" method="post" role="form" autocomplete="off">
-                          <div class="form-group">
-                              <label for="username">Nombre</label>
-                              <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="E-mail" value="" autocomplete="off">
-                          </div>
-
-                          <div class="form-group">
-                              <label for="email">E-mail</label>
-                              <input type="text" name="password" id="password" tabindex="2" class="form-control" placeholder="Clave" autocomplete="off">
-                          </div>
-
-                          <div class="form-group">
-                              <label for="text">Consulta</label>
-                              <textarea rows="3" cols="31">
-
-                              </textarea>
-                          </div>
-
-                          <div class="form-group">
-                                      <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-success" value="Ingresar">
-                          </div>
-                          <input type="hidden" class="hide" name="token" id="token" value="a465a2791ae0bae853cf4bf485dbe1b6">
-                      </form>
-                    </div>
-                  </li> -->
-                  <!-- <li class="nav-item active dropdown">
-                    <a class="nav-link dropdown-toggle" href="" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Inisiar sección</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdown05">
-                      <div class="text-center"><h3><b>Inicio de sección</b></h3></div>
-                      <form id="ajax-login-form" action="" method="post" role="form" autocomplete="off">
-                          <div class="form-group">
-                              <label for="username">E-mail</label>
-                              <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="E-mail" value="" autocomplete="off">
-                          </div>
-
-                          <div class="form-group">
-                              <label for="password">Clave</label>
-                              <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Clave" autocomplete="off">
-                          </div>
-
-                          <div class="form-group">
-                              <div class="row">
-                                  <div class="col-xs-7">
-                                      <input type="checkbox" tabindex="3" name="remember" id="remember">
-                                      <label for="remember">Recordarme</label>
-                                  </div>
-                                  <div class="col-xs-5 pull-right">
-                                      <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-success" value="Ingresar">
-                                  </div>
-                              </div>
-                          </div>
-
-                          <div class="form-group">
-                              <div class="row">
-                                  <div class="col-lg-12">
-                                      <div class="text-center">
-                                          <a href="" tabindex="5" class="forgot-password">Olvido su clave?</a>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                          <input type="hidden" class="hide" name="token" id="token" value="a465a2791ae0bae853cf4bf485dbe1b6">
-                      </form>
-                    </div>
-                  </li> -->
                 </ul>
               </div>
             </nav> <!--fin menu seccion y contato -->
@@ -171,14 +98,14 @@
 
         <nav class="navbar navbar-light bg-faded rounded navbar-toggleable-md" id="cat">
             <button class="navbar-toggler hidden-lg-up pull-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar2" aria-controls="collapsingNavbar2" aria-expanded="true"> ☰ </button>
-            <div class="collapse navbar-toggleable-md show" id="collapsingNavbar2">
+            <div class="divCat collapse navbar-toggleable-md show" id="collapsingNavbar2">
           <ul class="nav navbar-nav navbar-left">
 			        <!--Menu Categorias -->
               <?php
               $keys = array_keys($categorias);
               for($i = 0; $i < count($categorias); $i++) {
                  ?>
-                <li class="dropdown">
+                <li class="dropdown listaCat">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $keys[$i] ;?><span class="caret"></span></a>
                 <ul class="dropdown-menu multi-level">
                   <?php
@@ -219,29 +146,9 @@
     </div> <!-- termina contenedor-->
   </header>
 
-<!-- <div class="contenido">
-  <div class="pm row justify-content-center">
-    <div class="promo col col-4">
-      <img src="http://via.placeholder.com/350x150" class="rounded img-fluid" alt="...">
-    </div>
-    <div class="mapa col col-4">
-      <img src="http://via.placeholder.com/350x150" class="rounded img-fluid" alt="...">
-    </div>
-  </div> -->
-
-<!-- banner trasporte -->
-
   <div class="banner text-center">
     <h6 style="color : red"> SITIO ACTUALMENTE EN PROCESO DE MEJORA </h6>
     <img src="<?php echo site_url('img/bannerTrasporte.jpg');?>" class="img-fluid" alt="...">
   </div>
-
-
-<!-- carrusel -->
-
-
-
-
-
 
 </div>

@@ -1,4 +1,4 @@
-<section class="height : auto">
+<section class="lista">
 
 <?php
 if (count($rBusqueda) == 0) {

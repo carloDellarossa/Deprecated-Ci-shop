@@ -3,7 +3,7 @@
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                           <i class="fa fa-shopping-cart" aria-hidden="true"> Carro de compra </i>&nbsp;<span class="badge"><div style="color : #0275d8;"><?php echo $this->cart->total_items(); ?></div></span>
                         </a>
-                          <ul class="dropdown-menu animated slideInRight scroll" style="margin-top : 5px;  position: static;" >
+                          <ul class="dropdown-menu animated slideInRight scroll">
                             <div class="lista-carro" >
                               
     <div class="contenedor-producto-carro container">
@@ -33,6 +33,7 @@
             <?php
             } 
             ?>
+            <div class="carroextras">
             <li class="col-lg-12 col-md-12 col-sm-12" style="text-align : center">
                 <div class="info-carro text-right">
                     <div class="info-carro-total">
@@ -52,6 +53,7 @@
                     <h4><i class="glyphicon glyphicon-ok"></i><?php echo anchor('Orden', 'Finalizar la compra') ?></h4>
                 </div>
             </li> 
+            </div>
         <?php 
         }else{
         ?>
