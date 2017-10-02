@@ -17,9 +17,5 @@
     </div>
   </div>
 </footer>
-  <script  src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
-  <script src="<?php echo site_url('js/bootstrap.min.js');?>"></script>
-  <script src="<?php echo site_url('js/principal.js');?>"></script>
-  <script src="<?php echo site_url('js/slick.min.js');?>" type="text/javascript"></script>
 </body>
 </html>

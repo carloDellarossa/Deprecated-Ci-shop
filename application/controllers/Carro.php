@@ -26,10 +26,10 @@ class Carro extends CI_Controller {
   //tomar el precio segun la cantidad enviada
   function getPrecio($qty){
     $this->load->model('Rangos');
-    $rango['rango']= $this->Rangos->rangos($this->input->post('id'));
+    $rango['rango']= $this->Rangos->rangos($this->input->post('cod'));
 
     $price = 908;
-      
+    
       if ($this->input->post('qty') <= $rango['rango']['0']['rf']) {
         $price = intval($rango['rango']['0']['precio']);
       }elseif ($this->input->post('qty') >= $rango['rango']['1']['ri'] and $this->input->post('qty') <= $rango['rango']['1']['rf']) {
@@ -50,14 +50,16 @@ class Carro extends CI_Controller {
     $d = str_replace($aRemplasar,'-',$desc);
     $price = $this->getPrecio($this->input->post('qty'));
     
-    if($this->validarProducto($this->input->post('id'))===TRUE){
+    if($this->validarProducto($this->input->post('cod'))===TRUE){
       $insert = array(
-        'id' => $this->input->post('id'),
+        'id' => $this->input->post('cod'),
         'qty' => $this->input->post('qty'),
         'price' => $price,
         'name' => $d
       );
       $this->cart->insert($insert);
+           if(isset($_SERVER['HTTP_REFERER'])) { $previous = $_SERVER['HTTP_REFERER']; }
+      redirect($previous);
        return TRUE;
     }else{
       return FALSE;
@@ -118,6 +120,13 @@ class Carro extends CI_Controller {
       }
       //var_dump ($price);
     echo ($price);
+  }
+
+  function getRango(){
+    $this->load->model('Rangos');
+    $cod = $_POST[ 'cod' ];
+    $rango = json_encode($this->Rangos->rangos($cod)); 
+    echo $rango;
   }
 
     public function modTodo(){

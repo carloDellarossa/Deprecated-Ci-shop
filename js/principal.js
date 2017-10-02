@@ -35,11 +35,13 @@ function aMoneda(nStr) {
 }
 
 function updatePC(i) {
+	console.log('pc');
 	var qty = $('#cantidad' + i).val();
-	var cod = $('#codigo' + i).text();
+	var cod = $('#cod' + i).text();
 	var total = $('#total').text().replace(".", "").replace("$", "");
 	var price = '';
 	var tt = 0;
+	console.log('q ' + qty +' c ' + cod);
 	$.ajax({
 			url: base_url + 'index.php/Carro/getRPpP/',
 
@@ -55,6 +57,7 @@ function updatePC(i) {
 			subtotal = qty * parseInt(price);
 			price = parseFloat(price).toFixed(0);
 			subtotal = parseFloat(subtotal).toFixed(0);
+			
 			$('#pU' + i).text(aMoneda(price));
 			$('#pS' + i).text(aMoneda(subtotal));
 			updateCarro(i);
@@ -104,12 +107,50 @@ function updatePD() {
 		});
 }
 
+function getRango(i){
+	var cod = $('#cod'+i).val();
+	console.log(cod);
+	$.ajax({
+		url: base_url + 'index.php/Carro/getRango/',
+		type: "POST",
+		dataType: "json",
+		data : {cod : cod}
+	})
+		.done(function (data) {
+			var tr;
+			for (var i = 0; i < data.length; i++) {
+				tr = $('<tr/>');
+				tr.append("<td> Desde : " + data[i].ri + "</td>");
+				tr.append("<td> A : " + data[i].rf + "</td>");
+				tr.append("<td> $" + aMoneda(data[i].precio) + "</td>");
+				$('.rangos').append(tr);
+			}
+		});
+}
 
+function addCarro(data) {
+	$.ajax({
+		url: base_url + 'index.php/Carro/agregar',
+		type: "POST",
+		dataType: "text",
+		data: data
+	})
+		.done(function (data) {
+			$.get(base_url + "index.php/Carro/mostrarCarro", function (cart) {
+				$("#contenidoCarro").html(cart);
+				alert("Producto agregado al carro");
+			});
+		});
+}
 
 $(document).ready(function () {
-/* 	var link = "/Durban2/";
-	var site_url = '<?php echo site_url(); ?>'; */
-	//alert(window.location.host);
+
+	$('.btnModal').click(function(){
+		$(".rangos").empty();
+		getRango(this.id);
+		updatePC(this.id);
+	});
+
 
     updatePD();
 
@@ -129,31 +170,15 @@ $(document).ready(function () {
 
     //Agrega al carro Un producto
     $("ul.pro form").submit(function () {
-        var id = $(this).find('input[name=id]').val();
-        var name = $(this).find('input[name=name]').val();
-        var price = $(this).find('input[name=price]').val();
-        var qty = $(this).find('input[name=qty]').val();
-
-        $.post(base_url + "index.php/Carro/agregar", {
-
-            id: id,
-            qty: qty,
-            price: price,
-            name: name,
-            ajax: '1'
-        },
-
-            function (data) {
-
-                $.get(base_url + "index.php/Carro/mostrarCarro", function (cart) {
-
-
-                    $("#contenidoCarro").html(cart);
-                    alert("Producto agregado al carro");
-                });
-            });
-        return false; 
+		data = {
+			id: $('.cod').val(),
+			qty: $('.qty').val(),
+			price: $('.price').val(),
+			name: $('.name').val()
+		}
+		addCarrp(data);
     });
+
 
     //Actualisar carro desde vista Carro
     $("#fCarro").submit(function(){
@@ -169,10 +194,7 @@ $(document).ready(function () {
 	$('.promos').slick({
 		autoplay: true,
 		dots: true,
-/* 		infinite: true, */
 		speed: 500,
-	/* 	fade: true,
-		cssEase: 'linear' */
 	});
 
 });

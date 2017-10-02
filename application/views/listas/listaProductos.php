@@ -9,7 +9,6 @@
       <?php
       $i =0;
       foreach ($productosL as $p){
-        echo form_open('Carro/agregar');
         $file = 'http://www.libreriagiorgio.cl/lg/imagenes/codigos/' .$p['pro_codprod']. '.jpg';
         $file_headers = @get_headers($file); ?>
       <li class="lista-productos col col-xl-3 col-lg-3 col-md-6 col-sm-12">
@@ -43,22 +42,75 @@
               </div>
               </a>
               <div class="col col-12 btnAgregar text-center">
-                <?php
-                  $clase = array('class' => 'btn btn-outline-primary');
-                  echo form_submit('action','Agregar al carro',$clase); 
-                ?>
+                <button <?php echo"id='$i'" ?> type="button" class="btnModal btn btn-primary" <?php echo"data-target='#modal$i'" ?> data-toggle="modal">
+                    Agregar al carro
+                </button>
               </div>
           </div>
      
       </div>
       </li>
-      <?php echo form_hidden('id', $p['pro_codprod']); ?>
-      <?php echo form_hidden('name', $p['pro_desc']); ?>
-      <?php  echo form_hidden('qty', '1'); ?>
-      <?php echo form_hidden('price', $p['precio_bajo']);?>
-      <?php echo form_close(); ?>
-      <?php }?>
+      <!-- Modal -->
+<div class="modal fade" data-backdrop="false" <?php echo"id='modal$i'" ?> tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Agrege Cantidad</h5>
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="rangos table table-hover">
+      <thead>
+			<tr>
+				<th>Rango minimo</th>
+				<th>Rango maximo</th>
+				<th>Precio</th>
+			</tr>
+		</thead>
+        </table>
+
+        <?php 
+        echo form_open('Carro/agregar'); ?>
+        <?php
+        $cantidad = array('class' => 'cantidad','id' => 'cantidad'.$i);
+        echo form_label('Cantidad ', 'username'); ?><br>
+        <?php echo form_input('qty', "1" ,$cantidad);?>
+       			<?php $id= array(
+        			'type'  => 'hidden',
+        			'name'  => 'cod',
+        			'id'    => 'cod'.$i,
+        			'value' => $p['pro_codprod'],
+        			'class' => 'id'.$i
+				);?>
+        <h3>$<span <?php echo"id='pU$i'" ?>></span></h3>
+        <h3>$<span <?php echo"id='pS$i'" ?>></span></h3>
+				<?php echo form_input($id); ?>
+        <?php echo form_hidden('name', $p['pro_desc']); ?>
+        <?php echo form_hidden('price', $p['precio_bajo']);?>
+        <?php
+          $clase = array('class' => 'btn btn-outline-primary');
+          echo form_submit('action','Agregar al carro',$clase); 
+        ?>
+        <?php echo form_close(); ?>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+
+      </div>
+    </div>
+  </div>
+</div>              
+      <?php $i++;
+       }?>
     </ul>
   </div>
 </div>
+
+<!-- Button trigger modal -->
+
+
 </section>
+

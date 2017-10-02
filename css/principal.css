@@ -253,6 +253,16 @@ body {
   max-height: 500px;
 }
 
+/* Modal */ 
+
+.modal {
+  z-index: 50 !important;
+  position: fixed !important;
+}
+
+.modal-backdrop {
+  z-index: 20 !important;
+}
 
 /*banner pagos */
 

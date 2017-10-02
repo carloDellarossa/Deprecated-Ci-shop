@@ -9,10 +9,10 @@ class Template extends CI_Controller {
 		$this->load->library('cart');
 		$this->load->model('Listaproductos');
 
+
 		$data1['productosL'] = $this->Listaproductos->listaProductos();
 		$data4['categorias'] = $this->Categorias->catArrayLocal();
 		$data4['carro'] = $this->cart->contents();
-
 		//falta si $local no esta setiado volver a aleguir tienda o definir si va a exitir una por default
 
 		$this->load->view('template/template-top',$data4);

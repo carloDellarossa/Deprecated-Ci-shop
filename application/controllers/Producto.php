@@ -12,8 +12,9 @@ class Producto extends CI_Controller {
 		//traer producto seleccionado
 		$codigo = $_GET['codigo'];
 		$producto['producto'] = $this->Unproducto->producto($codigo);
-		$rango['rango']= $this->Unproducto->rangos($codigo);
+
 		//funciones
+		$rango['rango']= $this->Unproducto->rangos($codigo);
 		$data2 = $producto + $rango;
 		//view
 		$data1['categorias'] = $this->Categorias->catArrayLocal();
@@ -23,6 +24,13 @@ class Producto extends CI_Controller {
 		$this->load->view('template/bannerPago');
 		$this->load->view('detalleProducto',$data2);
 		$this->load->view('template/template-btm');
+	}
+
+	public function getRango($cod){
+	
+	
+	
+	echo $rango;
 	}
 
 }

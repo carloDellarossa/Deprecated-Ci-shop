@@ -29,6 +29,10 @@
     <link rel="shortcut icon" href="<?php echo site_url('img/dur.png');?>" type="image/x-icon" />
     <link rel="canonical" href=""/>
     <script>var base_url = '<?php echo site_url(); ?>';</script>
+      <script  src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+  <script src="<?php echo site_url('js/bootstrap.min.js');?>"></script>
+  <script src="<?php echo site_url('js/principal.js');?>"></script>
+  <script src="<?php echo site_url('js/slick.min.js');?>" type="text/javascript"></script>
 
     <title>Importadora Durban</title>
 
