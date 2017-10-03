@@ -106,7 +106,7 @@ if (count($productos) == 0) {
               </thead>
             </table>
             <?php 
-              echo form_open('Carro/agregar');
+              echo form_open('index.php/Carro/agregar');
               
               
               $id= array(
