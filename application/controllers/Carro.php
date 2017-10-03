@@ -44,24 +44,25 @@ class Carro extends CI_Controller {
 
   // agregar productos
 	function agregar() {
-
-    $desc = $this->input->post('name');
+    //input
+    $name = $this->input->post('name');
+    $qty = $this->input->post('qty');
+    $cod = $this->input->post('cod');
     $aRemplasar = array('/','(',')','*','#','%');
-    $d = str_replace($aRemplasar,'-',$desc);
-    $price = $this->getPrecio($this->input->post('qty'));
-    
-    if($this->validarProducto($this->input->post('cod'))===TRUE){
-      $insert = array(
-        'id' => $this->input->post('cod'),
-        'qty' => $this->input->post('qty'),
+    $d = str_replace($aRemplasar,'-',$name);
+    $price = $this->getPrecio($qty);
+    $insert = array(
+        'id' => $cod,
+        'qty' => $qty,
         'price' => $price,
         'name' => $d
-      );
-      $this->cart->insert($insert);
-           if(isset($_SERVER['HTTP_REFERER'])) { $previous = $_SERVER['HTTP_REFERER']; }
-      redirect($previous);
-       return TRUE;
+    );
+    if($this->cart->insert($insert) and $this->validarProducto($cod)===TRUE){
+        if(isset($_SERVER['HTTP_REFERER'])) { $previous = $_SERVER['HTTP_REFERER']; }
+        redirect($previous);
+        return TRUE;
     }else{
+      echo 'No se pudo ingresar la cantidad de '.$qty.' del producto ' .$d. ' con codigo ' .$cod. ' a un precio de ' .$price  ;
       return FALSE;
     }
    

@@ -29,19 +29,18 @@ function aMoneda(nStr) {
 	x2 = x.length > 1 ? '.' + x[1] : '';
 	var rgx = /(\d+)(\d{3})/;
 	while (rgx.test(x1)) {
-		x1 = x1.replace(rgx, '$1' + '.' + '$2'); // changed comma to dot here
+		x1 = x1.replace(rgx, '$1' + '.' + '$2');
 	}
 	return x1 + x2;
 }
 
 function updatePC(i) {
-	console.log('pc');
 	var qty = $('#cantidad' + i).val();
-	var cod = $('#cod' + i).text();
+	var cod = $('#cod'+i).val();
 	var total = $('#total').text().replace(".", "").replace("$", "");
 	var price = '';
 	var tt = 0;
-	console.log('q ' + qty +' c ' + cod);
+	console.log('q ' + qty +' c ' + cod + ' i '+ i);
 	$.ajax({
 			url: base_url + 'index.php/Carro/getRPpP/',
 
@@ -108,8 +107,7 @@ function updatePD() {
 }
 
 function getRango(i){
-	var cod = $('#cod'+i).val();
-	console.log(cod);
+	var cod = $('#cod' + i).val();
 	$.ajax({
 		url: base_url + 'index.php/Carro/getRango/',
 		type: "POST",
@@ -135,37 +133,32 @@ function addCarro(data) {
 		dataType: "text",
 		data: data
 	})
-		.done(function (data) {
-			$.get(base_url + "index.php/Carro/mostrarCarro", function (cart) {
-				$("#contenidoCarro").html(cart);
-				alert("Producto agregado al carro");
-			});
+	.done(function (data) {
+		$.get(base_url + "index.php/Carro/mostrarCarro", function (cart) {
+			$("#contenidoCarro").html(cart);
+			alert("Producto agregado al carro");
 		});
+	});
 }
 
 $(document).ready(function () {
 
 	$('.btnModal').click(function(){
 		$(".rangos").empty();
-		getRango(this.id);
-		updatePC(this.id);
+		var index = this.id.replace(/^\D+/g, '');
+		getRango(index);
 	});
 
-
-    updatePD();
-
-    //Actualisar precio por cantidad en vista Detalle
-    $('#cantidad').keyup(function () {
-        updatePD();
-    });
-
-    //Actualisar precio por cantidad en vista Carro
-    $('#tCarro > tbody > tr').each(function(e){
-        var index = e;
-        updatePC(index);
-        $('#cantidad'+index).keyup(function () {
-            updatePC(index);    
-        });
+	updatePD();
+	
+	//Actualisar precio 
+	$('.cantidad').keyup(function () {
+		var index = parseInt(this.id.replace(/^\D+/g, ''));
+		if (Number.isInteger(index)) {
+			updatePC(index);	
+		}else{
+			updatePD();
+		}
     });
 
     //Agrega al carro Un producto
@@ -176,7 +169,7 @@ $(document).ready(function () {
 			price: $('.price').val(),
 			name: $('.name').val()
 		}
-		addCarrp(data);
+		addCarro(data);
     });
 
 
@@ -197,6 +190,13 @@ $(document).ready(function () {
 		speed: 500,
 	});
 
+	$('.modal').on('show.bs.modal', function () {
+		$(this).find('.modal-body').css({
+			width: 'auto', //probably not needed
+			height: 'auto', //probably not needed 
+			'max-height': '100%'
+		});
+	});
 });
 
 

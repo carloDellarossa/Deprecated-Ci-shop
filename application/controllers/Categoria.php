@@ -72,7 +72,7 @@ class Categoria extends CI_Controller {
 	$data1["links"] = explode('&nbsp;',$str_links );
 
 	//Lista productos 
-	$data1['pXcat'] = $this->Listaproductos->listaPorCat($limite,$offset,$grupo,$subGrupo,$filtro);
+	$data1['productos'] = $this->Listaproductos->listaPorCat($limite,$offset,$grupo,$subGrupo,$filtro);
 	$data1['filtros'] = $this->Listaproductos->filtros($grupo,$subGrupo,$filtro);
 
 	//Categorias

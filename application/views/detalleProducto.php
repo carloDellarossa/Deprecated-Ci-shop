@@ -101,7 +101,14 @@
                   </div>
                 </div>
               <!-- Ocultos -->
-			        <?php echo form_hidden('id', $p['pro_codprod']); ?>
+			        <?php $id= array(
+        			'type'  => 'hidden',
+        			'name'  => 'cod',
+        			'id'    => 'cod',
+        			'value' => $p['pro_codprod'],
+        			'class' => 'id'
+              );?>
+              <?php echo form_input($id); ?>
 			        <?php echo form_hidden('name', $p['pro_desc']); ?>
               <?php echo form_hidden('price',$p['precio']); ?>
               <?php echo form_close(); ?>

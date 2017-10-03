@@ -31,15 +31,15 @@
 				<td>$<span <?php echo"id='pS$i'" ?> class="ps"><?php echo $item['price'] ?></span></td>
 				<td class="remove">
 
-				<?php $id= array(
+				<?php $codigo= array(
         			'type'  => 'hidden',
-        			'name'  => 'id',
-        			'id'    => 'id'.$i,
+        			'name'  => 'cod',
+        			'id'    => 'cod'.$i,
         			'value' => $item['id'],
-        			'class' => 'id'.$i
+        			'class' => 'cod'
 				);?>
 
-				<?php echo form_input($id); ?>
+				<?php echo form_input($codigo); ?>
 
 				<?php $rowid = array(
         			'type'  => 'hidden',

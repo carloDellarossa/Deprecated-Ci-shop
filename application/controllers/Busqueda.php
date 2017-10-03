@@ -62,7 +62,7 @@ class Busqueda extends CI_Controller {
 			$data1["links"] = explode('&nbsp;',$str_links );
 		
 			//Lista productos 
-			$data1['rBusqueda'] = $this->Buscar->buscar($aBuscar,$limite,$offset);
+			$data1['productos'] = $this->Buscar->buscar($aBuscar,$limite,$offset);
 		
 			//Categorias
 			$this->load->model('Categorias');
