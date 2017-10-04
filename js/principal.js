@@ -121,7 +121,7 @@ function getRango(i){
 				tr.append("<td> Desde : " + data[i].ri + "</td>");
 				tr.append("<td> A : " + data[i].rf + "</td>");
 				tr.append("<td> $" + aMoneda(data[i].precio) + "</td>");
-				$('.rangos').append(tr);
+				$('.rangoModal').append(tr);
 			}
 		});
 }
@@ -144,9 +144,10 @@ function addCarro(data) {
 $(document).ready(function () {
 
 	$('.btnModal').click(function(){
-		$(".rangos").empty();
+		$(".rangoModal tbody").empty();
 		var index = this.id.replace(/^\D+/g, '');
 		getRango(index);
+		updatePC(index);
 	});
 
 	updatePD();
@@ -172,7 +173,6 @@ $(document).ready(function () {
 		addCarro(data);
     });
 
-
     //Actualisar carro desde vista Carro
     $("#fCarro").submit(function(){
         event.preventDefault();
@@ -197,6 +197,7 @@ $(document).ready(function () {
 			'max-height': '100%'
 		});
 	});
+
 });
 
 

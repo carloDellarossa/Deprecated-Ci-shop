@@ -73,7 +73,7 @@ class Busqueda extends CI_Controller {
 		
 			$this->load->view('template/bannerPago');
 			$this->load->view('template/paginacion', $data1);
-			$this->load->view('listas/listaBusqueda',$data1);
+			$this->load->view('listas/listaTemplate',$data1);
 			$this->load->view('template/paginacion', $data1);
 		
 		

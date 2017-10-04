@@ -84,7 +84,7 @@ class Categoria extends CI_Controller {
 
 	$this->load->view('template/bannerPago');
 	$this->load->view('template/paginacion', $data1);
-	$this->load->view('listas/listaPorCat',$data1);
+	$this->load->view('listas/listaTemplate',$data1);
 	$this->load->view('template/paginacion', $data1);
 
 

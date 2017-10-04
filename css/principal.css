@@ -109,11 +109,8 @@ body {
 }
 
 .listaCat{
-  padding-right: 1%;
-  padding-left: 1%;
-  max-width: 200px;
+  list-style:none;
 }
-
 
 #cat {
   /*background: rgba(254,254,254,1);
@@ -585,3 +582,10 @@ z-index: 1;
   font-size: 500%;
 }
 
+.rangoModal th,td,tr {
+   border-bottom: 1px solid #000000;
+}
+
+/* .rangoModal th,td,tr {
+	text-align: center;
+} */

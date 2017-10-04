@@ -110,7 +110,7 @@
               for($i = 0; $i < count($categorias); $i++) {
                  ?>
                 <li class="dropdown listaCat">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $keys[$i] ;?><span class="caret"></span></a>
+                <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button"><?php echo $keys[$i] ;?></a>
                 <ul class="dropdown-menu multi-level">
                   <?php
                   foreach($categorias[$keys[$i]] as $key => $value) {

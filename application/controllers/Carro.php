@@ -58,7 +58,7 @@ class Carro extends CI_Controller {
         'name' => $d
     );
     if($this->cart->insert($insert) and $this->validarProducto($cod)===TRUE){
-        if(isset($_SERVER['HTTP_REFERER'])) { $previous = $_SERVER['HTTP_REFERER']; }
+      if(isset($_SERVER['HTTP_REFERER'])) { $previous = $_SERVER['HTTP_REFERER']; }
         redirect($previous);
         return TRUE;
     }else{
