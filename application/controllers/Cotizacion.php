@@ -1,5 +1,5 @@
 <?php
-class Cot extends CI_Controller {
+class Cotizacion extends CI_Controller {
 
 	function index() {
 		//librerias
@@ -9,11 +9,14 @@ class Cot extends CI_Controller {
 		$data4['categorias'] = $this->Categorias->catArrayLocal();
 		$data4['carro'] = $this->cart->contents();
 		$this->load->view('template/template-top',$data4);
-		$this->load->view('template/bannerPago');
+	
+
+		$this->load->view('cotisacion');
+
 		$this->load->view('template/template-btm');
 
 		// resumen de la orden
-		$this->load->view('cotisacion');
+
 	}
 
   function agregar (){
