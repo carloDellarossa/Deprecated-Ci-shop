@@ -30,7 +30,7 @@
 					<tr class="total">
 						<td colspan="2"><strong>Total</strong></td>
 						<td></td>
-						<td>$<?php echo $this->cart->total(); ?></td>
+						<td>$<?php echo number_format($this->cart->total(),'0',',','.'); ?></td>
 					</tr>
 				</tfooter>
 			</table>
@@ -39,58 +39,38 @@
 <?php endif; ?>
 
 
+<div class="container">
+  <form>
+	<div class="form-group row">
+      <label for="rut" class="col-sm-1 col-form-label">Rut</label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control" value="Rut">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="nombre" class="col-sm-1 col-form-label">Nombre</label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control" value="Nombre">
+      </div>
+    </div>
+	<div class="form-group row">
+      <label for="email" class="col-sm-1 col-form-label">Email</label>
+      <div class="col-sm-5">
+        <input type="email" class="form-control" value="Email">
+      </div>
+    </div>
 
-		<div class="col col-3">
-			<h3> Ingrese sus datos </h3>
-			<?php
-				echo $this->session->flashdata('email_sent');
-				echo form_open('Cot/email');
-			?>
-				<label for="exampleInputName2">Nombre</label><br>
-				<label for="exampleInputName2">Rut</label><br>
-				<label for="exampleInputEmail1">Email</label><br>
-				<input type = "submit" value = "Cotizar">
-			<?php
-				echo form_close();
-			?>
-		</div>
-		<div class="col col-3">
-			<br>
-			<input type = "input" name = "nombre" required /><br>
-			<input type = "input" name = "rut" required /><br>
-			<input type = "email" name = "email" required /><br>
-		</div>
-		<div class="col col-3">
-			<h3> Datos de Facturaccion </h3>
-			<?php
-				echo $this->session->flashdata('email_sent');
-				echo form_open('Cot/email');
-			?>
-				<label for="exampleInputName2">Nombre</label><br>
-				<label for="exampleInputName2">Rut</label><br>
-				<label for="exampleInputEmail1">Email</label><br>
-				<input type = "submit" value = "Cotizar">
-			<?php
-				echo form_close();
-			?>
-		</div>
-		<div class="col col-3">
-			<br>
-			<input type = "input" name = "nombre" required /><br>
-			<input type = "input" name = "rut" required /><br>
-			<input type = "email" name = "email" required /><br>
-		</div>		
+    <div class="form-group row">
+      <div class="offset-sm-2 col-sm-5">
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </div>
+    </div>
+
+  </form>
+</div>	
 
 	</div><!-- Termina row -->
 </div><!-- Termina container -->
-<?php
-// echo form_label('Nombre : ') ,form_input('Nombre', 'nombre');
-// echo form_label('Rut : ') ,form_input('Rut', '11111111-1');
-// echo form_label('Teléfono : ') ,form_input('Teléfono', '+56 1 111111111');
-// echo form_label('Correo : ') ,form_input('Correo', 'nombre@ejemplo.cl');
-?>
-
-<!--Tomar datos con hidden values para pasarlo al pdf de imprecion y a la base de datos-->
 <br>
 <br>
 

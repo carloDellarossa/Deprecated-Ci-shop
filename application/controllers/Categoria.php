@@ -34,7 +34,12 @@ class Categoria extends CI_Controller {
 		$config['page_query_string'] =true;
 		
 		$config["per_page"] = $limite;
-		$pagina = $_GET['per_page'];
+		if (isset($_GET['per_page'])){
+			$pagina = $_GET['per_page'] ;
+		}else{
+			$pagina = '1';
+		}
+		
 		//traer el total de filas
 		$total_row = $this->Listaproductos->record_count($grupo,$subGrupo,$filtro);
 		//valida el total de filas y devuelve la ultima 
@@ -47,7 +52,7 @@ class Categoria extends CI_Controller {
 			$offset = (intval($pagina) * intval($limite));
 		}
 
-	$config["base_url"] = base_url() . "Categoria/verPorCat";
+	$config["base_url"] = base_url() . "index.php/Categoria/verPorCat";
 	$config['num_links'] = 2;
 	$config['last_link'] = 'Ultima';
 	$config['first_link'] = 'Primera';
