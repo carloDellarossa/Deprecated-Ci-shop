@@ -19,7 +19,6 @@
                 <ul>
                     <li><a href="<?php echo site_url('Test/testFotosPorMarca');?>"><h3>Test por Marca.(modificar en model por ahora)</h3></a></li>
                     <li><a href="<?php echo site_url('Test/testFotosFaltante');?>"><h3>Test de Fotos faltantes.</h3></a></li>
-                    <li><a href="<?php echo site_url('Test/testFotosAll');?>"><h3>Ver todas las fotos</h3></a></li>
                 </ul>
             </div>
         </div>
@@ -74,51 +73,6 @@
 
 
       <?php } ?>
-      </tbody>
-      </table>
-
-<!--  <div><h1> Cantidad de productos con fotos : <?php echo $conFoto ?> ESTIMADOS <h1></div> -->
-
-       <?php }?>
-             <?php if(isset($fotos2)){ ?>
-      
-      <table class="table">
-        <thead>
-          <tr>
-            <th>N</th>
-            <th>Codigo</th>
-            <th>Saldo</th>
-            <th>Fotos</th>
-          </tr>
-        </thead>
-        <tbody>
-       <?php
-       	$i = 0 ;
-        $conFoto = 0 ;
-      	foreach ($fotos2 as $f){
-
-      	$file = 'http://www.libreriagiorgio.cl/lg/imagenes/codigos/' .$f['pro_codprod']. '.jpg';
-        $file_headers = @get_headers($file);
-        if(!$file_headers || $file_headers[0] == 'HTTP/1.1 404 Not Found') {
-        $i++; ?> 
-      
-
-      <?php }else{
-       ?>
-          <tr>
-            <td><?php echo $i?></td>
-            <td><?php echo $f['pro_codprod']?></td>
-            <td><?php echo number_format($f['psl_saldo'])?></td>
-            <td><?php echo $i?></td>
-            <style>
-            .foto {
-              max-height: 310px;
-              max-width : 310px;
-            }
-            </style>
-            <td><img class="foto" src="<?php echo 'http://www.libreriagiorgio.cl/lg/imagenes/codigos/' .$f['pro_codprod']. '.jpg' ?>" alt=""></td>
-          </tr>
-      <?php  }} ?>
       </tbody>
       </table>
 

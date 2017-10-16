@@ -27,7 +27,8 @@ class Unproducto extends CI_Model {
         		r.pre_codprod = p.pro_codprod and
         		p.pro_codprod = psl_codprod and
         		pro_codprod = '".$p."' and
-        		pre_rangoinicial = '1' and
+            pre_rangoinicial = '1' and
+            pro_vigencia = 'S' and
         		pre_codlista='1' and
         		psl_saldo != '0' and
         		psl_codbodega = '1' ");
@@ -41,10 +42,12 @@ class Unproducto extends CI_Model {
               round(pre_rangoinicial) as ri,
               case when pre_rangofinal is null then 999999 else round(pre_rangofinal) end as rf,
               round(((100-pre_maxdesctorecargo)/100)*pre_precio) as precio
-              from sto_precios
+              from sto_precios,
+                  sto_prodsal
             where
-              pre_codprod = '".$cod."'
-            and
+              pre_codprod = '".$cod."' and
+              pro_vigencia = 'S' and
+              psl_saldo != '0' and 
               pre_codlista ='1'
             order by ri");
 

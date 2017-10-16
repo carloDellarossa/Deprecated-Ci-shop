@@ -13,9 +13,12 @@ class Listaproductos extends CI_Model {
                round(pre_rangoinicial) as ri,
                case when pre_rangofinal is null then 999999 else round(pre_rangofinal) end as rf,
                round(((100-pre_maxdesctorecargo)/100)*pre_precio) as precio
-               from sto_precios
+               from sto_precios,
+                    sto_prodsal            
              where
-               pre_codlista ='1'
+               pre_codlista ='1' and
+               psl_saldo != '0' and
+               pro_vigencia = 'S'
              order by ri");
 
            return $result_set -> result_array();
@@ -39,7 +42,8 @@ class Listaproductos extends CI_Model {
         		pre_codlista='1' and
         		psl_saldo != '0' and
             pro_codtipo = '5' and
-        		psl_codbodega = '1' and
+            psl_codbodega = '1' and
+            pro_vigencia = 'S' and
         		(
 			    pro_codprod = '02016085' or
 			    pro_codprod = '02016147' or
@@ -95,7 +99,8 @@ class Listaproductos extends CI_Model {
         		pre_codlista='1' and
         		psl_saldo != '0' and
             pro_codtipo = '5' and
-        		psl_codbodega = '1' and
+            psl_codbodega = '1' and
+            pro_vigencia = 'S' and
             ".$catQuery." 
             ". $f ."
             group by pro_codprod,pro_desc,saldo
@@ -144,6 +149,7 @@ class Listaproductos extends CI_Model {
               psl_saldo != '0' and
               pro_codtipo = '5' and
               psl_codbodega = '1' and
+              pro_vigencia = 'S' and
               ".$catQuery." 
               ". $f ."
           ");

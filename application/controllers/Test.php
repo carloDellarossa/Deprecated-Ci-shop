@@ -35,6 +35,13 @@ class Test extends CI_Controller {
 		$this->load->view('test/testfotos',$data);
 	}
 
+		public function testFotosAll(){
+		$this->load->model('TestModel');
+		$this->load->helper('url');
+		$data['fotos2'] = $this->TestModel->testFotosAll();
+		$this->load->view('test/testfotos',$data);
+	}
+
 	public function cambiarNombre(){
 	$i = 0;
 	$x = 0;

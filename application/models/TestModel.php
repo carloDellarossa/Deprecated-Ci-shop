@@ -126,5 +126,28 @@ order by marca
           return $result_set->result_array();
         }
 
+        public function testFotosAll(){
+            $result_set = $this->db->query(
+            "select
+              DISTINCT pro_codprod,
+              pro_desc,
+              bar_codbarras,
+              bar_factor,
+              bar_unmed,
+              psl_saldo,
+              m.aap_texto as marca
+            from sto_producto
+              left join sto_prodsal on pro_codprod = psl_codprod and psl_codbodega = '1'
+              left join sto_prodadic m on m.aap_codprod = pro_codprod and m.aap_codanalisis = '1'
+              left join sto_prodcodbar bar on bar.bar_codprod = pro_codprod
+            where
+              pro_vigencia = 'S' and
+          		psl_saldo > '1' and
+  			      pro_codtipo = '5' and
+          		psl_codbodega = '1' 
+              order by pro_codprod
+            ");
+          return $result_set->result_array();
+        }
 
       }
